@@ -10,5 +10,8 @@ rwb0fuz1024.c: rwb0fuz1024.w
 rwb0fuz1024.o: rwb0fuz1024.c
 	gcc -Wall -c rwb0fuz1024.c -std=c99 -O2
 
-rwtest: rwb0fuz1024.o rwtest.c devurandom.c
-	gcc -o rwtest -Wall -O2 rwtest.c devurandom.c rwb0fuz1024.o -lgmp -lcrypto
+rabin.o: rabin.c
+	gcc -Wall -c rabin.c -std=c99 -O2
+
+rwtest: rabin.o rwtest.c devurandom.c
+	gcc -o rwtest -Wall -L/usr/local/opt/openssl/lib/ -O2 rwtest.c devurandom.c rabin.o -lgmp -lcrypto

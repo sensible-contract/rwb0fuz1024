@@ -49,8 +49,8 @@ main(int argc, char **argv) {
   uint64_t start_time, end_time;
   unsigned long long outputlen, inputlen;
 
-  static const unsigned sign_its = 500;
-  static const unsigned verify_its = 500000;
+  static const unsigned sign_its = 1;
+  static const unsigned verify_its = 1;
 
   start_time = time_now();
   for (i = 0; i < sign_its; ++i) {

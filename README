@@ -14,3 +14,12 @@ is easy to change.
 This is simply an exposition of the work of Rabin, Williams, Bernstein,
 Bleichenbacher and others. Any artifice found here is theirs, any mistakes are
 mine.
+
+# gen key pair
+
+on Mac
+
+   brew install openssl
+   brew install gmp
+   make rwtest
+   ./rwtest
